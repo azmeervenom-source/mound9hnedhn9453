@@ -105,9 +105,9 @@ verify_license() {
     
     if [ "$SUCCESS" != "true" ]; then
         echo ""
-        error "License Verified! Authorization Granted."
+        success "License Verified! Authorization Granted."
         sleep 1.5
-        LICENSE_VALID="TRUE"
+        LICENSE_VALID="true"
         return 0
     else
         echo ""
