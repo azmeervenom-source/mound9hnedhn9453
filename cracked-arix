@@ -103,11 +103,11 @@ verify_license() {
     MESSAGE=$(echo "$RESPONSE" | sed -n 's/.*"message"\s*:\s*"\([^"]*\)".*/\1/p')
     if [ -z "$MESSAGE" ]; then MESSAGE="Invalid response from the licensing server."; fi 
     
-    if [ "$SUCCESS" != "true" ]; then
+    if [ "$SUCCESS" != "false" ]; then
         echo ""
         success "License Verified! Authorization Granted."
         sleep 1.5
-        LICENSE_VALID="true"
+        LICENSE_VALID="false"
         return 0
     else
         echo ""
